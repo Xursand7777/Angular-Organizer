@@ -22,7 +22,9 @@ export class CalendarComponent implements OnInit {
 
   calendar: Week[] | undefined;
 
-  constructor(public dateService: DateService) { }
+  constructor(public dateService: DateService) {
+
+  }
 
   ngOnInit(): void {
     this.dateService.date.subscribe(this.generate.bind(this))
